@@ -1,0 +1,345 @@
+/* Estilos globales aplicados a todos los elementos de la página */
+*{
+    margin: auto; /* Centra automáticamente el elemento en su contenedor horizontalmente */
+    /* Esto es útil para centrar elementos de bloque como divs, pero no afecta a elementos en línea. */
+}
+
+/* Estilos para la barra de estado lateral (menú vertical) */
+.barraestado{
+    position:absolute; /* Posiciona la barra de estado de forma absoluta, permitiendo colocarla en cualquier lugar */
+    width: 7vw; /* Establece el ancho de la barra de estado al 7% del ancho de la ventana del navegador (viewport width) */
+    height: 100vh; /* Establece la altura de la barra de estado al 100% de la altura de la ventana del navegador (viewport height) */
+    background-color:  #04544c; /* Define el color de fondo de la barra de estado (verde oscuro) */
+    text-align: center; /* Centra el texto y otros elementos en el interior de la barra de estado horizontalmente */
+}
+
+/* Estilos para el área de contenido principal */
+.contenido{
+    position:fixed; /* Posiciona el contenido de forma fija, manteniéndolo en su lugar durante el desplazamiento */
+    margin-left: 7vw; /* Establece un margen izquierdo igual al ancho de la barra de estado, para evitar superposiciones */
+    width: 100%; /* Establece el ancho del contenido al 100% del ancho de su contenedor (que en este caso, por el fixed, es la ventana) */
+    height: 100vh; /* Establece la altura del contenido al 100% de la altura de la ventana del navegador */
+    background-color: #ecfcf3; /* Define el color de fondo del contenido (verde muy claro) */
+}
+
+/* Estilos para los iconos dentro de la barra de estado */
+.barraestado i{
+    font-size: 5vh; /* Establece el tamaño de la fuente de los iconos al 5% de la altura de la ventana (viewport height) */
+    color: #1cac74; /* Define el color de los iconos (verde claro) */
+}
+
+/* Estilos para el icono de inicio dentro de la barra de estado */
+.barraestado .inicio {
+    margin-top: 5vh; /* Establece un margen superior para el icono de inicio, separándolo de la parte superior de la barra */
+}
+
+/* Estilos para el efecto hover (cuando el ratón pasa por encima) de los iconos en la barra de estado */
+.barraestado i:hover{
+    color: #20855e; /* Cambia el color del icono a un verde más oscuro al pasar el ratón, proporcionando retroalimentación visual */
+}
+
+/* Estilos para el efecto hover de la sección de redes sociales en la barra de estado */
+.barraestado .redes:hover{
+    color: #20855e; /* Cambia el color del texto/iconos de redes sociales al pasar el ratón */
+}
+
+/* Estilos para la sección de redes sociales en la barra de estado */
+.barraestado .redes{
+    margin-top: 50vh; /* Empuja la sección de redes sociales hacia la parte inferior de la barra de estado */
+}
+
+/* Estilos para los contenedores individuales de redes sociales dentro de la sección de redes */
+.barraestado .redes div{
+    margin-top: 3vh; /* Añade espacio entre los iconos/enlaces de redes sociales */
+}
+
+/* Estilos para la barra de navegación principal */
+nav.entorno{
+    padding-top: 5.5vh; /* Añade relleno en la parte superior de la barra de navegación */
+    word-spacing: 5.5vh; /* Aumenta el espacio entre las palabras en la barra de navegación */
+    padding-left: 70px; /* Añade relleno a la izquierda de la barra de navegación */
+}
+
+/* Estilos para los enlaces dentro de la barra de navegación */
+.entorno a{
+    font-size: 3vh; /* Establece el tamaño de la fuente de los enlaces */
+    color: #000000; /* Define el color del texto de los enlaces (negro) */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    margin-right: 20px; /* Añade un margen a la derecha de cada enlace para separarlos */
+    line-height: 40px; /* Establece la altura de la línea del texto, lo que puede ayudar a centrar verticalmente el texto */
+}
+
+/* Estilos para los círculos que contienen iconos o números */
+.circulo {
+    width: 30px; /* Establece el ancho del círculo */
+    height: 30px; /* Establece la altura del círculo */
+    background-color: #22c55e; /* Define el color de fondo del círculo (verde brillante) */
+    border-radius: 50%; /* Convierte el cuadrado en un círculo */
+    display: inline-block; /* Permite que el círculo se comporte como un elemento en línea pero con propiedades de bloque */
+    vertical-align: middle; /* Alinea verticalmente el círculo con otros elementos en la misma línea */
+    text-align: center; /* Centra el contenido (texto, icono) dentro del círculo */
+    line-height: 20px; /* Establece la altura de la línea del texto dentro del círculo.  OJO: Si el contenido es un icono, esto puede no ser la mejor manera de centrarlo verticalmente.  Es mejor usar flexbox o grid para centrado vertical moderno. */
+    margin-right: 1px; /* Añade un pequeño margen a la derecha del círculo */
+}
+
+/* Estilos para los iconos dentro de los círculos */
+.circulo i {
+    font-size: 1rem; /* Establece el tamaño de la fuente del icono (relativo al tamaño de fuente del elemento padre) */
+    color: #ffffff; /* Define el color del icono (blanco) */
+    line-height: 2; /* Ajusta la altura de la línea para centrar verticalmente el icono.  De nuevo, flexbox o grid son mejores para esto.*/
+    vertical-align: middle; /* Alinea verticalmente el icono con el texto circundante. */
+    display: inline-block; /* Permite modificar el tamaño y la alineación del icono */
+}
+
+/* Estilos para los enlaces que muestran números */
+a.numero {
+    color: #1cac74; /* Define el color del texto del número (verde claro) */
+    font-size: 3vh; /* Establece el tamaño de la fuente del número */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    white-space: nowrap; /* Evita que el número se divida en varias líneas, lo que puede ser importante para la presentación */
+}
+
+/* Estilos para el efecto hover de los enlaces en la barra de navegación principal del contenido */
+.contenido nav a:hover{
+    color: rgb(146, 142, 142); /* Cambia el color del enlace a un gris al pasar el ratón */
+}
+
+/* Estilos para el contenedor principal del contenido (probablemente la sección principal de la página) */
+main {
+    height: 78vh; /* Establece la altura del contenedor principal */
+    width: 162vh; /* Establece el ancho del contenedor principal */
+    position: absolute; /* Permite posicionar el contenedor en cualquier lugar dentro de su contenedor padre */
+    margin-top: 15vh; /* Añade un margen en la parte superior */
+    margin-left: 34vh; /* Añade un margen a la izquierda */
+    box-shadow: 1px -2px 40px rgba(107, 107, 107, 0.39); /* Aplica una sombra suave (desplazamiento horizontal, desplazamiento vertical, desenfoque, color) */
+}
+
+/* Estilos para la sección derecha dentro del contenedor principal */
+main .derecha {
+    width: 41vh; /* Establece el ancho de la sección derecha */
+    height: 38vh; /* Establece la altura de la sección derecha */
+    padding: 20vh; /* Añade relleno alrededor del contenido dentro de la sección derecha */
+    margin: 0 auto; /* Centra horizontalmente la sección derecha dentro de su contenedor */
+    position: relative; /* Permite posicionar elementos dentro de esta sección de forma relativa a ella */
+    float: right; /* Hace que la sección derecha flote a la derecha de su contenedor */
+    align-items: center; /* Intenta centrar verticalmente los elementos hijos.  Puede no funcionar como se espera con float.  Flexbox o grid son preferibles. */
+    background-color:white; /* Establece el color de fondo de la sección derecha a blanco */
+}
+
+/* Estilos para el encabezado (título) dentro de la sección derecha */
+.derecha h1{
+    width: 50vh; /* Establece el ancho del encabezado */
+    text-align: center; /* Centra el texto del encabezado */
+    margin-bottom: 60px; /* Añade un margen debajo del encabezado */
+    color:rgba(31,169,117,255); /* Define el color del texto del encabezado (verde) */
+    margin-top: -70px; /* Añade un margen superior negativo para mover el encabezado hacia arriba, posiblemente para superponerse con otro elemento */
+    font-size: 40px; /* Establece el tamaño de la fuente del encabezado */
+}
+
+/* Estilos para la sección izquierda dentro del contenedor principal */
+main .izquierda{
+    width: 41vh; /* Establece el ancho de la sección izquierda */
+    height: 38vh; /* Establece la altura de la sección izquierda */
+    padding: 20vh; /* Añade relleno alrededor del contenido en la sección izquierda */
+    margin: 0 auto; /* Centra horizontalmente la sección izquierda dentro de su contenedor */
+    position: relative; /* Permite posicionar elementos dentro de esta sección */
+    float: left; /* Hace que la sección izquierda flote a la izquierda de su contenedor */
+    align-items: center; /* Intenta centrar verticalmente los elementos hijos.  Puede no funcionar bien con float. */
+    background-color: rgb(221, 255, 0); /* Establece el color de fondo de la sección izquierda a amarillo.  ¡OJO!  Este estilo se sobrescribe más adelante. */
+}
+
+/* Estilos para el formulario */
+.formulario {
+    width: 65vh; /* Establece el ancho del formulario */
+    padding: 50px; /* Añade relleno alrededor del formulario */
+    margin-left: -13vh; /* Añade un margen izquierdo negativo para mover el formulario a la izquierda */
+    margin-top: -6vh; /* Añade un margen superior negativo para mover el formulario hacia arriba */
+}
+
+/* Estilos para las filas dentro del formulario */
+.fila {
+    width: 100%; /* Hace que las filas ocupen el ancho completo de su contenedor */
+    margin-bottom: 20px; /* Añade espacio debajo de cada fila */
+}
+
+/* Estilos para los divs que son hijos directos de la clase .fila */
+.fila > div {
+    float: left; /* Coloca los divs uno al lado del otro */
+    width: 47%; /* Establece el ancho de cada div al 47% del ancho de la fila */
+    margin-right: 6%; /* Añade un margen a la derecha de cada div para separarlos */
+}
+
+/* Estilos para el último div dentro de cada fila */
+.fila > div:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último div en la fila para evitar espacio extra al final */
+}
+
+/* Estilos para los contenedores de los campos de email y número */
+.div-email,
+.div-number {
+    width: 100%; /* Hace que estos divs ocupen el ancho completo de su contenedor */
+    margin-bottom: 35px; /* Añade un margen inferior más grande que el de las filas genéricas */
+    float: none; /* Evita que estos divs floten, asegurando que ocupen una línea completa */
+}
+
+/* Estilos para los campos de entrada dentro de los divs de la clase .fila */
+.fila div input{
+    margin-bottom: 10px; /* Añade un margen inferior a los campos de entrada */
+}
+
+/* Estilos para las etiquetas del formulario */
+.formulario label {
+    display: block; /* Hace que las etiquetas ocupen una línea completa, colocándolas encima de los campos de entrada */
+    color: rgba(158,160,160,255); /* Define el color del texto de las etiquetas (gris) */
+    font-weight: normal; /* Establece el peso de la fuente de las etiquetas a normal */
+    margin-bottom: 5px; /* Añade un pequeño margen debajo de las etiquetas */
+    font-size: 16px; /* Establece el tamaño de la fuente de las etiquetas */
+}
+
+/* Estilos para los campos de entrada del formulario */
+.formulario input {
+    width: 100%; /* Hace que los campos de entrada ocupen el ancho completo de su contenedor */
+    padding: 12px; /* Añade relleno dentro de los campos de entrada */
+    border: none; /* Elimina el borde predeterminado de los campos de entrada */
+    border-radius: 100px; /* Crea bordes redondeados (estilo de píldora) */
+    font-size: 15px; /* Establece el tamaño de la fuente del texto dentro de los campos de entrada */
+    background-color: #f5f5f5; /* Define el color de fondo de los campos de entrada (gris claro) */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho y alto totales del elemento, evitando que el tamaño aumente al añadir padding */
+}
+
+/* Estilos para el botón del formulario */
+.formulario button {
+    display: block; /* Hace que el botón ocupe una línea completa, permitiendo centrarlo con márgenes automáticos */
+    width: 18vh; /* Establece el ancho del botón */
+    height: 4.5vh; /* Establece la altura del botón */
+    margin-top: 120px; /* Añade un margen superior grande, separando el botón de los campos de entrada */
+    font-weight: bold; /* Establece el texto del botón en negrita */
+    padding: 8px; /* Añade relleno dentro del botón */
+    background-color: rgba(31,169,117,255); /* Define el color de fondo del botón (verde) */
+    color: white; /* Define el color del texto del botón (blanco) */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 80px; /* Crea bordes redondeados (estilo de píldora) */
+    font-size: 16px; /* Establece el tamaño de la fuente del texto del botón */
+    cursor: pointer; /* Cambia el cursor del ratón a una mano al pasar por encima, indicando que es un elemento interactivo */
+    margin:0 auto; /* Centra horizontalmente el botón dentro de su contenedor */
+}
+
+/* Estilos para el efecto hover del botón del formulario */
+.formulario button:hover {
+    background-color: rgba(19, 126, 92, 0.938); /* Cambia el color de fondo del botón a un verde más oscuro al pasar el ratón */
+}
+
+/* Estilos para un pseudo-elemento ::after añadido a elementos con la clase .boton */
+.boton::after{
+    content: ""; /* Necesario para que el pseudo-elemento se muestre */
+    display: inline-block; /* Permite establecer ancho y alto y alinear el pseudo-elemento en línea con otros elementos */
+    width: 30px; /* Establece el ancho del pseudo-elemento (para la imagen de reproducción) */
+    height: 30px ; /* Establece la altura del pseudo-elemento (para la imagen de reproducción) */
+    background-image: url(img/play.png); /* Establece la imagen de fondo del pseudo-elemento (icono de reproducción) */
+    background-size: contain; /* Escala la imagen de fondo para que quepa dentro del contenedor del pseudo-elemento sin distorsionarse */
+    vertical-align: middle; /* Alinea verticalmente el pseudo-elemento con el texto circundante */
+    margin-left: 10px; /* Añade un margen a la izquierda del pseudo-elemento, separándolo del texto */
+}
+
+/* Sobrescribe los estilos de la clase .izquierda para añadir un fondo con degradado e imagen */
+.izquierda{
+    background-image: linear-gradient(45deg, rgba(5, 54, 83, 0.767) 0%,rgba(13, 92, 112, 0.555) 99%, rgba(16, 98, 146, 0.747) 100%), url(img/odontologojpg.jpg);
+    /* Aplica un degradado lineal de color y una imagen de fondo.  El degradado se mezcla con la imagen. */
+    background-size: contain; /* Escala la imagen de fondo para que quepa dentro del contenedor, manteniendo su relación de aspecto */
+}
+
+/* Estilos para un botón específico dentro de la sección izquierda */
+.izquierda_button{
+    display: block; /* Hace que el botón ocupe una línea completa y permite centrarlo horizontalmente */
+    width: 18vh; /* Establece el ancho del botón */
+    height: 4.5vh; /* Establece la altura del botón */
+    margin-top: 120px; /* Añade un margen superior grande */
+    font-weight: bold; /* Establece el texto del botón en negrita */
+    padding: 8px; /* Añade relleno dentro del botón */
+    background-color: rgba(19, 126, 92, 0.938); /* Define el color de fondo del botón (verde) */
+    color: white; /* Define el color del texto del botón (blanco) */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 80px; /* Crea bordes redondeados */
+    font-size: 16px; /* Establece el tamaño de la fuente del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima, indicando que es interactivo */
+    margin:0 auto; /* Centra horizontalmente el botón */
+}
+
+/* Estilos para otro botón específico dentro de la sección izquierda (con borde) */
+.izquierda_button2{
+    display: block; /* Hace que el botón ocupe una línea completa y permite centrarlo */
+    width: 18vh; /* Establece el ancho del botón */
+    height: 4.5vh; /* Establece la altura del botón */
+    margin-top: 120px; /* Añade un margen superior grande */
+    font-weight: bold; /* Establece el texto del botón en negrita */
+    padding: 8px; /* Añade relleno dentro del botón */
+    background-color: rgba(0, 0, 0, 0); /* Establece el color de fondo del botón como transparente */
+    border: 2px, solid; /* ¡OJO! Esto tiene un error de sintaxis. Debería ser:  border: 2px solid rgba(19, 126, 92, 0.938); */
+    color: rgba(19, 126, 92, 0.938); /* Define el color del texto del botón (verde) */
+    border-radius: 80px; /* Crea bordes redondeados */
+    font-size: 16px; /* Establece el tamaño de la fuente del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin:0 auto; /* Centra horizontalmente el botón */
+}
+
+/* Pseudo-elemento ::after para el segundo botón de la izquierda (imagen de reproducción) */
+.izquierda_button2::after{
+    content: ""; /* Necesario para que el pseudo-elemento se muestre */
+    display: inline-block; /* Permite establecer ancho y alto y alinear en línea */
+    width: 30px; /* Establece el ancho del pseudo-elemento */
+    height: 30px ; /* Establece la altura del pseudo-elemento */
+    border-radius: 50%; /* Intenta hacer el pseudo-elemento circular, pero la imagen de fondo determinará la forma final */
+    background-image: url(img/play.png); /* Establece la imagen de fondo (icono de reproducción) */
+    background-size: contain; /* Escala la imagen para que quepa dentro del contenedor */
+    vertical-align: middle; /* Alinea verticalmente el pseudo-elemento con el texto */
+    margin-left: 10px; /* Añade un margen a la izquierda del pseudo-elemento */
+}
+
+/* Estilos para el contenedor de texto en la sección izquierda */
+.texto_izquierda{
+    background-color: rgba(101, 196, 196, 0.377); /* Define el color de fondo con transparencia (verde azulado claro) */
+    height: 68vh; /* Establece la altura del contenedor de texto */
+    width: 81vh; /* Establece el ancho del contenedor de texto */
+    margin-left: -20vh; /* Margen izquierdo negativo para mover el contenedor a la izquierda */
+    font-family: Arial, Helvetica, sans-serif; /* Establece la familia de fuentes */
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-top: -20vh; /* Margen superior negativo para mover el contenedor hacia arriba */
+    padding-top: 10vh; /* Añade relleno en la parte superior */
+}
+
+/* Estilos para el encabezado dentro del contenedor de texto izquierdo */
+.texto_izquierda h1{
+    color: white; /* Define el color del texto (blanco) */
+    font-size: 45px; /* Establece el tamaño de la fuente */
+    line-height: 1.2; /* Establece el espaciado entre líneas */
+    margin-left: 9vh; /* Añade un margen a la izquierda */
+}
+
+/* Estilos para un título con estilo específico dentro del contenedor de texto izquierdo */
+.texto_izquierda .title_estilo{
+    color: rgba(19, 126, 92, 0.938); /* Define el color del texto (verde) */
+    margin-bottom: 20px; /* Añade un margen debajo del título */
+}
+
+/* Estilos para los párrafos dentro del contenedor de texto izquierdo */
+.texto_izquierda p{
+    margin-left: 9vh; /* Añade un margen a la izquierda */
+    margin-right: 8vh; /* Añade un margen a la derecha */
+    font-size: 20px; /* Establece el tamaño de la fuente */
+    color: white; /* Define el color del texto (blanco) */
+}
+
+/* Estilos para los botones dentro del contenedor de texto izquierdo */
+.texto_izquierda button{
+    margin-top: 4vh; /* Añade un margen en la parte superior */
+    margin-left: 9vh; /* Añade un margen a la izquierda */
+    margin-right: 1vh; /* Añade un margen a la derecha */
+    display: inline; /* Hace que los botones se muestren en línea */
+}
+
+/* Estilos para un div que contiene el elemento principal (main) */
+div main{
+    margin-right: 50vh; /* Añade un margen a la derecha */
+    margin-top: 6vh; /* Añade un margen en la parte superior */
+    margin-left: 5vh; /* Añade un margen a la izquierda */
+}
