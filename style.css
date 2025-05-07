@@ -235,7 +235,7 @@ main .izquierda{
     display: inline-block; /* Permite establecer ancho y alto y alinear el pseudo-elemento en línea con otros elementos */
     width: 30px; /* Establece el ancho del pseudo-elemento (para la imagen de reproducción) */
     height: 30px ; /* Establece la altura del pseudo-elemento (para la imagen de reproducción) */
-    background-image: url(img/play.png); /* Establece la imagen de fondo del pseudo-elemento (icono de reproducción) */
+    background-image: url(img/botton-play.png); /* Establece la imagen de fondo del pseudo-elemento (icono de reproducción) */
     background-size: contain; /* Escala la imagen de fondo para que quepa dentro del contenedor del pseudo-elemento sin distorsionarse */
     vertical-align: middle; /* Alinea verticalmente el pseudo-elemento con el texto circundante */
     margin-left: 10px; /* Añade un margen a la izquierda del pseudo-elemento, separándolo del texto */
@@ -243,7 +243,7 @@ main .izquierda{
 
 /* Sobrescribe los estilos de la clase .izquierda para añadir un fondo con degradado e imagen */
 .izquierda{
-    background-image: linear-gradient(45deg, rgba(5, 54, 83, 0.767) 0%,rgba(13, 92, 112, 0.555) 99%, rgba(16, 98, 146, 0.747) 100%), url(img/odontologojpg.jpg);
+    background-image: linear-gradient(45deg, rgba(5, 54, 83, 0.767) 0%,rgba(13, 92, 112, 0.555) 99%, rgba(16, 98, 146, 0.747) 100%), url(img/person.-image.jpg);
     /* Aplica un degradado lineal de color y una imagen de fondo.  El degradado se mezcla con la imagen. */
     background-size: contain; /* Escala la imagen de fondo para que quepa dentro del contenedor, manteniendo su relación de aspecto */
 }
